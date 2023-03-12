@@ -2,18 +2,16 @@
     box-sizing: border-box;
 }
 
-html{
-    font-size: 75%;
-}
-
 input{
     width:50%
 }
+
 button{
     width: 10%;
 }
 
 html {
+    font-size: 75%;
     background: -webkit-linear-gradient(#55c1ff, #33658a);
     background: -moz-linear-gradient(#55c1ff, #33658a);
     background: -ms-linear-gradient(#55c1ff, #33658a);
@@ -22,27 +20,35 @@ html {
     min-height: 100%;
   }
   
-  body {
+body {
     text-align: center;
   }
-  body #weather-animations {
+
+body #weather-animations {
     display: inline-block;
-    width: 50%;
-  }
-  body #weather-animations .row {
+    width: 75%;
+}
+
+ul{
+    list-style-type: none;
+}
+
+body #weather-animations .row {
     display: flex;
     align-items: center;
     height: 200px;
     width: auto;
-  }
-  body #weather-animations .row .weather {
+}
+
+body #weather-animations .row .weather {
     display: inline-block;
     position: relative;
     width: 200px;
     min-width: 200px;
     height: 200px;
-  }
-  body #weather-animations .row .weather .rays {
+}
+
+body #weather-animations .row .weather .rays {
     background: #fec601;
     position: absolute;
     z-index: 0;
@@ -52,8 +58,9 @@ html {
     -o-transform: rotate(20deg);
     transform: rotate(20deg);
     animation: sunRotate 10s infinite linear;
-  }
-  body #weather-animations .row .weather .rays:after {
+}
+
+body #weather-animations .row .weather .rays:after {
     content: "";
     background: #fec601;
     position: absolute;
@@ -63,8 +70,9 @@ html {
     -ms-transform: rotate(40deg);
     -o-transform: rotate(40deg);
     transform: rotate(40deg);
-  }
-  body #weather-animations .row .weather .sun {
+}
+
+body #weather-animations .row .weather .sun {
     display: relative;
     background: -webkit-linear-gradient(#fec601, #ea7317);
     background: -moz-linear-gradient(#fec601, #ea7317);
@@ -78,8 +86,9 @@ html {
     border-radius: 50px;
     position: absolute;
     z-index: 1;
-  }
-  body #weather-animations .row .weather .cloud {
+}
+
+body #weather-animations .row .weather .cloud {
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     -ms-border-radius: 50px;
@@ -87,8 +96,9 @@ html {
     border-radius: 50px;
     position: relative;
     z-index: 2;
-  }
-  body #weather-animations .row .weather .cloud:before {
+}
+
+body #weather-animations .row .weather .cloud:before {
     content: "";
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
@@ -97,8 +107,9 @@ html {
     border-radius: 50px;
     position: absolute;
     z-index: 2;
-  }
-  body #weather-animations .row .weather .cloud:after {
+}
+
+body #weather-animations .row .weather .cloud:after {
     content: "";
     position: absolute;
     -webkit-border-radius: 50px;
@@ -107,8 +118,9 @@ html {
     -o-border-radius: 50px;
     border-radius: 50px;
     z-index: 3;
-  }
-  body #weather-animations .row .weather .raindrop {
+}
+
+body #weather-animations .row .weather .raindrop {
     width: 5px;
     height: 5px;
     border-radius: 80% 0 55% 50%/55% 0 80% 50%;
@@ -122,7 +134,8 @@ html {
     transform: rotate(-45deg);
     position: relative;
     backface-visibility: hidden;
-  }
+}
+
   body #weather-animations .row .weather .star {
     margin: 50px 0;
     position: relative;
@@ -142,8 +155,9 @@ html {
     -ms-transform: scale(0.15);
     -o-transform: scale(0.15);
     transform: scale(0.15);
-  }
-  body #weather-animations .row .weather .star:before {
+}
+
+body #weather-animations .row .weather .star:before {
     content: "";
     border-left: 30px solid transparent;
     border-right: 30px solid transparent;
@@ -159,8 +173,9 @@ html {
     -ms-transform: rotate(-35deg);
     -o-transform: rotate(-35deg);
     transform: rotate(-35deg);
-  }
-  body #weather-animations .row .weather .star:after {
+}
+
+body #weather-animations .row .weather .star:after {
     content: "";
     position: absolute;
     display: block;
@@ -176,20 +191,21 @@ html {
     -ms-transform: rotate(-70deg);
     -o-transform: rotate(-70deg);
     transform: rotate(-70deg);
-  }
-  body #weather-animations .row .desc {
+}
+
+body #weather-animations .row .desc {
     position: relative;
     color: #ffffff;
     font-size: 30px;
     font-family: "Pacifico", cursive;
-  }
+}
   
-  #rays {
+#rays {
     width: 100px;
     height: 100px;
     top: 35px;
     left: 25px;
-  }
+}
   
   #rays:after {
     height: 100px;
@@ -198,43 +214,43 @@ html {
     left: 0px;
   }
   
-  #sun {
+#sun {
     width: 100px;
     height: 100px;
     top: 35px;
     left: 25px;
-  }
+}
   
-  #miniRays {
+#miniRays {
     width: 75px;
     height: 75px;
     top: 25px;
     left: 75px;
-  }
+}
   
-  #miniRays:after {
+#miniRays:after {
     height: 75px;
     width: 75px;
     top: 0px;
     left: 0px;
-  }
+}
   
-  #miniSun {
+#miniSun {
     width: 75px;
     height: 75px;
     top: 25px;
     left: 75px;
-  }
+}
   
-  #miniCloud {
+#miniCloud {
     background-color: #dbe4ee;
     width: 75px;
     height: 75px;
     top: 40px;
     animation: cloudFloat 5s infinite linear;
-  }
+}
   
-  #miniCloud:before {
+#miniCloud:before {
     background-color: #dbe4ee;
     width: 50px;
     height: 50px;
@@ -242,7 +258,7 @@ html {
     left: 55px;
   }
   
-  #miniCloud:after {
+#miniCloud:after {
     background: -webkit-linear-gradient(#dbe4ee, #a9bbcf);
     background: -moz-linear-gradient(#dbe4ee, #a9bbcf);
     background: -ms-linear-gradient(#dbe4ee, #a9bbcf);
@@ -252,9 +268,9 @@ html {
     height: 60px;
     top: 40px;
     left: -15px;
-  }
+}
   
-  #miniDarkCloud {
+#miniDarkCloud {
     background-color: #90a7bf;
     width: 75px;
     height: 75px;
@@ -266,17 +282,17 @@ html {
     -o-transform: scale(0.75);
     transform: scale(0.75);
     animation: cloudFloatOpposite 5s infinite linear;
-  }
+}
   
-  #miniDarkCloud:before {
+#miniDarkCloud:before {
     background-color: #90a7bf;
     width: 50px;
     height: 50px;
     top: 17px;
     left: 55px;
-  }
+}
   
-  #miniDarkCloud:after {
+#miniDarkCloud:after {
     background: -webkit-linear-gradient(#90a7bf, #7792af);
     background: -moz-linear-gradient(#90a7bf, #7792af);
     background: -ms-linear-gradient(#90a7bf, #7792af);
@@ -286,9 +302,9 @@ html {
     height: 60px;
     top: 40px;
     left: -15px;
-  }
+}
   
-  #cloud {
+#cloud {
     background-color: #dbe4ee;
     width: 75px;
     height: 75px;
@@ -299,17 +315,17 @@ html {
     -o-transform: scale(1.25);
     transform: scale(1.25);
     animation: cloudFloat 5s infinite linear;
-  }
+}
   
-  #cloud:before {
+#cloud:before {
     background-color: #dbe4ee;
     width: 50px;
     height: 50px;
     top: 17px;
     left: 55px;
-  }
+}
   
-  #cloud:after {
+#cloud:after {
     background: -webkit-linear-gradient(#dbe4ee, #a9bbcf);
     background: -moz-linear-gradient(#dbe4ee, #a9bbcf);
     background: -ms-linear-gradient(#dbe4ee, #a9bbcf);
@@ -319,45 +335,45 @@ html {
     height: 60px;
     top: 40px;
     left: -15px;
-  }
+}
   
-  #raindrop1 {
+#raindrop1 {
     left: -72px;
     animation: raindrop 2s infinite linear, raindropFade 2s infinite linear;
-  }
+}
   
-  #raindrop2 {
+#raindrop2 {
     left: -48px;
     animation: raindropAlt 2s infinite linear, raindropFade 2s infinite linear;
-  }
+}
   
-  #raindrop3 {
+#raindrop3 {
     left: -24px;
     animation: raindrop 2s infinite linear, raindropFade 2s infinite linear;
-  }
+}
   
-  #raindrop4 {
+#raindrop4 {
     left: 0px;
     animation: raindropAlt 2s infinite linear, raindropFade 2s infinite linear;
-  }
+}
   
-  #darkCloud {
+#darkCloud {
     background-color: #90a7bf;
     width: 75px;
     height: 75px;
     top: 0px;
     animation: cloudFloat 5s infinite linear;
-  }
+}
   
-  #darkCloud:before {
+#darkCloud:before {
     background-color: #90a7bf;
     width: 50px;
     height: 50px;
     top: 17px;
     left: 55px;
-  }
+}
   
-  #darkCloud:after {
+#darkCloud:after {
     background: -webkit-linear-gradient(#90a7bf, #7792af);
     background: -moz-linear-gradient(#90a7bf, #7792af);
     background: -ms-linear-gradient(#90a7bf, #7792af);
@@ -367,9 +383,9 @@ html {
     height: 60px;
     top: 40px;
     left: -15px;
-  }
+}
   
-  #moon {
+#moon {
     width: 100px;
     height: 100px;
     top: -150px;
@@ -387,27 +403,27 @@ html {
     -o-transform: rotate(130deg);
     transform: rotate(130deg);
     animation: moonSwing 3s infinite linear;
-  }
+}
   
-  #star1 {
+#star1 {
     top: 35px;
     left: -100px;
     animation: starFadeIn 5s infinite linear;
-  }
+}
   
-  #star2 {
+#star2 {
     top: -300px;
     left: 15px;
     animation: starFadeOut 6s infinite linear;
-  }
+}
   
-  #star3 {
+#star3 {
     top: -375px;
     left: 50px;
     animation: starFadeIn 7s infinite linear;
-  }
+}
   
-  @keyframes sunRotate {
+@keyframes sunRotate {
     from {
       -webkit-transform: rotate(0deg);
       -moz-transform: rotate(0deg);
@@ -422,8 +438,9 @@ html {
       -o-transform: rotate(359deg);
       transform: rotate(359deg);
     }
-  }
-  @keyframes cloudFloat {
+}
+
+@keyframes cloudFloat {
     0% {
       left: 0px;
     }
@@ -433,8 +450,9 @@ html {
     100% {
       left: 0px;
     }
-  }
-  @keyframes cloudFloatOpposite {
+}
+
+@keyframes cloudFloatOpposite {
     0% {
       left: 75px;
     }
@@ -444,24 +462,27 @@ html {
     100% {
       left: 75px;
     }
-  }
-  @keyframes raindrop {
+}
+
+@keyframes raindrop {
     from {
       top: 100px;
     }
     to {
       top: 175px;
     }
-  }
-  @keyframes raindropAlt {
+}
+
+@keyframes raindropAlt {
     from {
       top: 75px;
     }
     to {
       top: 150px;
     }
-  }
-  @keyframes raindropFade {
+}
+
+@keyframes raindropFade {
     75% {
       opacity: 1;
     }
@@ -469,7 +490,8 @@ html {
       opacity: 0;
     }
   }
-  @keyframes moonSwing {
+
+@keyframes moonSwing {
     0% {
       -webkit-transform: rotate(125deg);
       -moz-transform: rotate(125deg);
@@ -491,8 +513,9 @@ html {
       -o-transform: rotate(125deg);
       transform: rotate(125deg);
     }
-  }
-  @keyframes starFadeIn {
+}
+
+@keyframes starFadeIn {
     0% {
       opacity: 0;
     }
@@ -502,7 +525,8 @@ html {
     100% {
       opacity: 0;
     }
-  }
+}
+
   @keyframes starFadeOut {
     0% {
       opacity: 1;
@@ -513,4 +537,4 @@ html {
     100% {
       opacity: 1;
     }
-  }
+}

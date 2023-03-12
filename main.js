@@ -45,10 +45,11 @@ function checkLocation(e){
 };
   
 function updateData(){
+    document.getElementById('weather-image').src = ""
     document.getElementById('weather-image').src = weatherImg
-    document.getElementById('local-time').innerText = `Time: ${localTime}`
-    document.getElementById('temp').innerText = `Current temperature: ${temperature}`
-    document.getElementById('feels-like').innerText = `Feels like: ${feelsLike}`
+    document.getElementById('local-time').innerText = `Current Time: ${localTime}`
+    document.getElementById('temp').innerText = `Current Temperature: ${temperature}`
+    document.getElementById('feels-like').innerText = `Feels Like: ${feelsLike}`
     document.getElementById('condition').innerText = `${weatherCondition}`
     document.getElementById('winds').innerText = `Winds: ${wind}`
     document.getElementById('city-state').innerText=`${cityName}, ${region}`
