@@ -6,20 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Weather App">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
     <title>Weather App</title>
 </head>
 <body>
-    <h1>Weather</h1>
-    <form action="" id="weatherForm">
-        <div>
-            <input type="text"  id="city" placeholder="Enter City - Example: London">
-            <button type="submit" id="custom-button">Get Weather</button>
-        </div>
-        <div class="weather-details" hidden>
-            <h2>City, State</h2>
-            <img id="weather-image" src="" alt="weather condition" srcset="">
-        </div>
-    </form>
+    <div>
+        <h1>Weather</h1>
+        <form action="" id="weatherForm">
+            <div>
+                <input type="text"  id="city" placeholder="Enter City - Example: London">
+                <button type="submit" id="custom-button">Get Weather</button>
+            </div>
+            <div id="weatherdetails" hidden>
+                <h2 id="city-state">City, State</h2>
+                <h2 id="country"></h2>
+                <ul>
+                    <li id="local-time">Local Time</li>
+                    <li id="temp">Temperature</li>
+                    <li id="feels-like">Feels Like: </li>
+                    <li id="condition">Weather Condition</li>
+                    <li id="winds">Winds</li>
+                </ul>
+                <img id="weather-image" src="" alt="weather condition" srcset="">
+            </div>
+        </form>
+    </div>
 
     <script src="main.js"></script>
 </body>

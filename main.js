@@ -6,6 +6,9 @@ var temperature;
 var feelsLike;
 var weatherCondition;
 var weatherImg;
+var cityName;
+var wind;
+var region;
 
 let weatherForm = document.getElementById("weatherForm")
 weatherForm.addEventListener("submit", checkLocation)
@@ -26,19 +29,37 @@ function checkLocation(e){
             .then(res=>{
                 console.log(res)
                 country = res.location.country
+                cityName = res.location.name
+                region = res.location.region
                 localTime = res.location.localtime
                 temperature = res.current.temp_f
+                wind = res.current.wind_mph
                 feelsLike = res.current.feelslike_f
                 weatherCondition = res.current.condition.text
                 weatherImg = `http://${res.current.condition.icon}`
-                document.getElementById('weather-image').src = weatherImg
+                updateData()
+                
             })
 
     }
 };
   
 function updateData(){
-    console.log(weatherImg)
-    
+    document.getElementById('weather-image').src = weatherImg
+    document.getElementById('local-time').innerText = `Time: ${localTime}`
+    document.getElementById('temp').innerText = `Current temperature: ${temperature}`
+    document.getElementById('feels-like').innerText = `Feels like: ${feelsLike}`
+    document.getElementById('condition').innerText = `${weatherCondition}`
+    document.getElementById('winds').innerText = `Winds: ${wind}`
+    document.getElementById('city-state').innerText=`${cityName}, ${region}`
+    document.getElementById('country').innerText=`${country}`
+
+    let details = document.getElementById('weatherdetails');
+    console.log(details)
+    details.removeAttribute("hidden");    
+    //document.getElementById('winds').src = weatherImg
 }
 
+function updateBackground(){
+    return
+}
