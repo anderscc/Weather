@@ -2,8 +2,22 @@ apiKey = "cbdb33f975ca48b59c130513231203"
 location = "London"
 baseUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}`
 
+var country;
+var localTime;
+var temperature;
+var feelsLike;
+var weatherCondition;
+var weatherImg;
 
 result = fetch(baseUrl)
+            .then(res=>{
+                country = res.location.country
+                localTime = res.location.localtime
+                temperature = res.current.temp_f
+                feelsLike = res.current.feelslike_f
+                weatherCondition = res.current.condition.text
+                weatherImg = res.current.condition.icon
+            })
 console.log(result)
 
 // {
