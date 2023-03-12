@@ -33,6 +33,11 @@ ul{
     list-style-type: none;
 }
 
+#weather-details {
+    border: solid 2px rgba(255, 0, 0, .5);
+    width: 50%;
+}
+
 body #weather-animations .row {
     display: flex;
     align-items: center;

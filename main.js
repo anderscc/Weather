@@ -55,7 +55,7 @@ function updateData(){
     document.getElementById('city-state').innerText=`${cityName}, ${region}`
     document.getElementById('country').innerText=`${country}`
 
-    let details = document.getElementById('weatherdetails');
+    let details = document.getElementById('weather-details');
     console.log(details)
     details.removeAttribute("hidden");    
     //document.getElementById('winds').src = weatherImg
