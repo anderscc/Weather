@@ -18,23 +18,27 @@
             </div>
             <div class="desc">Sunny</div>
         </div>
-        <h1>Weather</h1>
+        <h1>Weather Checker</h1>
         <form action="" id="weatherForm">
-            <div>
+            <div class="input" autocomplete="on">
                 <input type="text"  id="city" placeholder="Enter City - Example: London">
-                <button type="submit" id="custom-button">Get Weather</button>
+                <!-- <button type="submit" id="custom-button">Get Weather</button> -->
             </div>
-            <div id="weather-details" hidden>
-                <h2 id="city-state">City, State</h2>
-                <h2 id="country"></h2>
-                <ul>
-                    <li id="local-time">Local Time</li>
-                    <li id="temp">Temperature</li>
-                    <li id="feels-like">Feels Like: </li>
-                    <li id="condition">Weather Condition</li>
-                    <li id="winds">Winds</li>
-                </ul>
-                <img id="weather-image" src="" alt="weather condition" srcset="">
+            <div class="weather-card card" id="weather-card" hidden>
+                <div id="weather-details" >
+                    <div class="city-state">
+                        <h2 id="city-state">City, State</h2>
+                        <h2 id="country"></h2>
+                    </div>
+                    <ul>
+                        <li id="local-time">Local Time</li>
+                        <li id="temp">Temperature</li>
+                        <li id="feels-like">Feels Like: </li>
+                        <li id="condition">Weather Condition</li>
+                        <li id="winds">Winds</li>
+                    </ul>
+                    <img id="weather-image" src="" alt="weather condition" srcset="">
+                </div>
             </div>
         </form>
     </div>
