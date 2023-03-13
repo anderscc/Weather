@@ -1,5 +1,5 @@
-const apiKey = "cbdb33f975ca48b59c130513231203"
-const googleApiKey = "AIzaSyDSVbbnuWZfD376IdEvyBxpZep3dAZCk3g"
+const apiKey = config.apiKey
+const googleApiKey = config.googleApiKey
 var cityValue
 
 var placeId
@@ -93,11 +93,5 @@ function updateData(){
 
     let details = document.getElementById('weather-card');
     details.removeAttribute("hidden"); 
-    details.style.display = "flex"; 
-      
-    //document.getElementById('winds').src = weatherImg
-}
-
-function updateBackground(){
-    return
+    details.style.display = "flex";  
 }
