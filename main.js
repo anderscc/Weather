@@ -22,7 +22,7 @@ var region;
 let weatherForm = document.getElementById("weatherForm")
 weatherForm.addEventListener("submit", checkLocation)
 
-function checkLocation(e){
+async function checkLocation(e){
     e.preventDefault();
     city = document.getElementById("city");
     
@@ -34,32 +34,21 @@ function checkLocation(e){
         cityValue = document.querySelector('input').value
         var baseUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${cityValue}`
 
-        fetch(baseUrl).then(res=>res.json())
-            .then(res=>{
-                country = res.location.country
-                cityName = res.location.name
-                region = res.location.region
-                localTime = res.location.localtime
-                temperature = res.current.temp_f
-                wind = res.current.wind_mph
-                feelsLike = res.current.feelslike_f
-                weatherCondition = res.current.condition.text
-                weatherImg = `http://${res.current.condition.icon}`
-                updateData()          
-            })
-
+        const resp = await fetch(baseUrl).then(res=>res.json())
+        weatherDetails = await resp.json().then(res=>{
+            country = res.location.country
+            cityName = res.location.name
+            region = res.location.region
+            localTime = res.location.localtime
+            temperature = res.current.temp_f
+            wind = res.current.wind_mph
+            feelsLike = res.current.feelslike_f
+            weatherCondition = res.current.condition.text
+            weatherImg = `http://${res.current.condition.icon}`
+            updateData()          
+        })
     }
 };
-
-function getPicture(){
-    fetch(googleUrl)
-        .then(res=>res.json())
-        .then(res=>res.predictions)
-        .then(res=>{
-            console.log(res)
-            placeId = res.place_id
-            })
-}
 
 function updateData(){
     const weatherImage = document.getElementById('weather-image').src = ""
@@ -76,3 +65,14 @@ function updateData(){
     details.removeAttribute("hidden"); 
     details.style.display = "flex";  
 }
+
+
+// function getPicture(){
+//     fetch(googleUrl)
+//         .then(res=>res.json())
+//         .then(res=>res.predictions)
+//         .then(res=>{
+//             console.log(res)
+//             placeId = res.place_id
+//             })
+// }
