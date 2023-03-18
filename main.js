@@ -51,7 +51,6 @@ function checkLocation(e){
     }
 };
 
-
 function getPicture(){
     fetch(googleUrl)
         .then(res=>res.json())
@@ -61,28 +60,10 @@ function getPicture(){
             placeId = res.place_id
             })
 }
-function getPicture1(){
-    fetch(googleUrl2)
-            .then(res=>res.json())
-            .then(res=>res.result)
-            .then(res=>res.photos)
-            .then(res=>{
-                console.log(res)
-                photoReference=res.photo_reference
-            })
-}
-
- function getPicture2(){
-    fetch(googleUrl3)
-    .then(res=>res.json)
-    .then(res=>{
-        console.log(res)
-    })
- }
 
 function updateData(){
-    document.getElementById('weather-image').src = ""
-    document.getElementById('weather-image').src = weatherImg
+    const weatherImage = document.getElementById('weather-image').src = ""
+    weatherImage.src = weatherImg
     document.getElementById('local-time').innerText = `Current Time: ${localTime}`
     document.getElementById('temp').innerText = `Current Temperature: ${temperature} \u00B0 `
     document.getElementById('feels-like').innerText = `Feels Like: ${feelsLike} \u00B0 `
